@@ -1,0 +1,65 @@
+﻿untitled 
+  
+
+
+
+“Any examinee found adopting unfair means will be expelled from the trimester / program as per UIU disciplinary rules.”
+
+
+Answer ALL of the following questions: 
+  
+
+
+
+
+
+QUESTION 1                                [ CO3 ]                                                 12
+Consider the following scenario of UIU Library Books Rental Services Web application:
+
+
+“UIU has opened an online book rental system for the students of UIU. It allows a student to rent maximum five books for 2 weeks. The student requests for books through the Rent Book process from the web application. Students need to provide ID and name for this purpose. The process uses the STUDENT database to verify the credentials. If the information is valid, the BOOK database is searched. If the book is unavailable an error message is shown. If the book is found, a student can select his desired number of book/s in an iterative way. At the end of Rent Book process, the BOOK_RENT database is updated having the book list, student’s info, and rental duration information. With this info an invoice is also sent to the student for future reference. The student needs to go physically to the university library for receiving the books.
+
+
+At the time of returning the books, a student needs to return those to an attendant of Library. The attendant verifies the invoice and uses the Return Book process online to make updates in the BOOK database. If any student returns the books after due date, a process Calculate Fine initiates, that automatically calculates a fine and the STUDENT_ACCOUNTS file will be updated having rental info with fine amount. The student has to pay the fine in the usual way i.e. by going to the bank to deposit cash or through DBBL ATM card. The Accountant updates the payment updates in STUDENT_ACCOUNTS file. If the student does not clear any outstanding fine by the end of a trimester, the process Notification Engine notifies UCAM. It also sends a reminder to the STUDENT’s email address. A database NOTIFICATION_TRACKER is maintained to achieve the purpose.”
+
+
+1. Draw the USE CASE Diagram (having at least one “include” and “extend” connection). Mention the purposes of include or extend symbol.                                          [4]
+2. Write down the USE CASE Descriptive Form for one of a major Use Case.                       [4]
+3. Draw Sequence Diagram for the above scenario.                                          [4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUESTION 2                                 [ CO3]                                         13
+Consider the following scenario for a “Hospital Telemedicine System”:
+United Hospital is going to provide remote medical support to the patients. A Visitor can view the doctor profiles, appointment schedules, and general queries about COVID-19 or Monkey pox and responses to them on the website. A Subscriber can book an appointment, purchase medicine, or post a query. Moderators can reply to a query, post announcements, and reschedule an appointment upon request by a subscriber. Doctors can create or update schedules according to their availability. They also write articles on how to stay safe from COVID-19 or Monkey pox infection.
+When a subscriber books an appointment, he/she visits the FIND A DOCTOR page and searches for doctors in a particular discipline. After selecting a doctor from the DOCTORS LIST page, the subscriber selects a time slot from the available schedule. The subscriber needs to make the payment via bKash, nagad, or debit/credit card at least 6 hours before the time of the appointment. The subscriber can reschedule or cancel any booking with a penalty at least 2 hours before the time of the appointment
+Management of multiple patients in a single time slot is done by a first-come-first-serve manner. To have the consultation, the subscriber needs to log in at first. After that the subscriber request requests to join the WAITING ROOM. If an appointment is scheduled and the payment is confirmed, the subscriber is allowed to enter into the waiting room. Otherwise, the entry is denied. The doctor allows one single patient from the waiting room into the ONLINE CHAMBER at a time. After having the consultation, the patient downloads a prescription and leaves the online chamber.
+
+
+1. Draw the Class Diagram and CRC card for the above scenario. Mention the reasons to identify the classes here.                                                                          [4+3+3]
+2. Draw the State Diagram for the above scenario.                                                  [3]
+
+
+
+
+
+QUESTION 3                                 [CO3]                                                         15
+1. One SRS document can support the different stakeholders in different perspective in a software development process – illustrate it.                                                                    3
+2. Briefly explain on the concept of functional and non-functional requirements for a software product. Write functional and non-functional features/requirements for the scenario mention in questions 2.                                                                                            3+3
+3. Mention the concept of the golden rules of UI design. Show the proposed UI Sketch for the home page design for the scenario described in question 2 and mention the rule/s you have followed in proposed drawing.                                                                        3+3
+
+
+
+
+Page  of

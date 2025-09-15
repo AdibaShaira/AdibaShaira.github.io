@@ -1,86 +1,169 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adiba Shaira — PhD Candidate</title>
-  <meta name="description" content="PhD student in Computer Science at Stony Brook University. Wearable sensing, health sensing, and human performance analytics." />
+  <title>Adiba Shaira — PhD Student</title>
+  <meta name="description" content="PhD student at Stony Brook University. Wearable sensing, health sensing, and human performance analytics." />
+  <link rel="icon" href="assets/profile.png" />
+  <link rel="preload" as="image" href="assets/profile.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
-  <meta property="og:title" content="Adiba Shaira — PhD Candidate" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adiba Shaira — PhD Student" />
   <meta property="og:description" content="Wearable sensing & human performance analytics." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.png" />
   <meta property="og:url" content="https://AdibaShaira.github.io" />
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Adiba Shaira",
+    "jobTitle":"PhD Student",
+    "affiliation":{"@type":"Organization","name":"Stony Brook University"},
+    "email":"mailto:adibashairarifa@gmail.com",
+    "url":"https://AdibaShaira.github.io",
+    "sameAs":[
+      "https://github.com/AdibaShaira",
+      "https://www.linkedin.com/in/adiba-shaira"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header class="container">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar" role="complementary">
+    <img src="assets/profile.png" alt="Portrait of Adiba Shaira" class="avatar" loading="eager" decoding="async" />
     <h1 class="name">Adiba Shaira</h1>
-    <p class="tagline">PhD @ Stony Brook — Wearable sensing & human performance analytics</p>
-    <nav class="links">
-      <a href="mailto:adibashairarifa@gmail.com">Email</a>
-      <a href="https://github.com/AdibaShaira" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/adiba-shaira" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+    <p class="role">PhD @ Stony Brook</p>
+    <p class="blurb">Wearable sensing & human performance analytics. Seeking a Summer internship in applied ML / sensing / health analytics.</p>
+    <div class="contact">
+      <a href="mailto:adibashairarifa@gmail.com" aria-label="Email">Email</a>
+      <a href="https://github.com/AdibaShaira" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/adiba-shaira" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a href="CV.pdf" target="_blank" rel="noopener" aria-label="CV">CV</a>
+    </div>
+    <div class="controls">
+      <button id="themeToggle" aria-pressed="false">🌙 Dark</button>
+    </div>
+  </aside>
+
+  <main id="main" class="content" role="main">
+    <nav class="topnav">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
     </nav>
-  </header>
 
-  <main class="container">
-    <section>
+    <section id="about">
       <h2>About</h2>
-      <p>
-        I’m a Computer Science PhD student at Stony Brook University (PiCASSo Lab), advised by Prof. Shubham Jain.
-        My research focuses on wearable-sensor–based safety and prediction systems for human performance.
-        I’m seeking a Summer internship in applied ML / sensing / health analytics.
-      </p>
-    </section>
-
-    <section>
-      <h2>Research & Publications</h2>
-      <ul>
-        <li><strong>LiftSafe:</strong> Human performance prediction from arm-mounted IMU during strength training — real-time safety forecasting.</li>
-        <li><strong>Wearable-based Detection of Muscle Failure Onset:</strong> Single-IMU metrics (LLR, steadiness, struggle duration) indicate impending failure.</li>
-        <li><em>Gene Tree Parsimony…</em> RECOMB Comparative Genomics Workshop, 2024.</li>
+      <p>I’m a Computer Science PhD student in the PiCASSo Lab advised by Prof. Shubham Jain. My research builds single-IMU pipelines to forecast next-rep kinematics and proactively detect unsafe states in upper-body strength training. I’ve also worked on medical NLP (ICD coding), sleep analytics, and human performance modeling.</p>
+      <ul class="meta">
+        <li><strong>Research areas:</strong> Wearable sensing, time-series ML, human performance analytics, medical NLP</li>
+        <li><strong>Looking for:</strong> Applied ML / sensing / health analytics internship</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Selected Projects</h2>
-      <ul>
-        <li><strong>Sleep Efficiency & Next-Day Mood:</strong> Single-device modeling and feature discovery.</li>
-        <li><strong>Global Disaster Insights:</strong> Interactive analytics and visualization pipeline.</li>
-        <li><strong>Healthway:</strong> Full-stack web app for diagnostics and tele-consultation.</li>
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">Sep 2025</span> — Submitting <em>LiftSafe</em> manuscript; expanded failure-proximity analysis.</li>
+        <li><span class="date">Aug 2025</span> — Bench & overhead datasets curated with LOSO splits for forecasting & safety.</li>
+        <li><span class="date">Apr 2024</span> — Paper at RECOMB CG: “Gene Tree Parsimony in the Presence of D/L/ILS.”</li>
       </ul>
     </section>
 
-    <section>
+    <section id="publications">
+      <h2>Publications (selected)</h2>
+
+      <article class="pub">
+        <div class="pub-main">
+          <h3>Utilizing a Single Wearable Sensor for Indicating Muscle Failure During Strength Training</h3>
+          <p><strong>Adiba Shaira</strong>, Hunter J. Bennett, Shubham Jain</p>
+          <p class="venue">Target: Sports Medicine – Open, 2025.</p>
+        </div>
+        <div class="pub-links">
+          <a href="CV.pdf#page=1" target="_blank" rel="noopener">Abstract</a>
+          <a href="#" aria-disabled="true">PDF (coming)</a>
+          <a href="#" aria-disabled="true">Code</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="pub-main">
+          <h3>Gene Tree Parsimony in the Presence of Gene Duplication, Loss, and Incomplete Lineage Sorting</h3>
+          <p><strong>Adiba Shaira</strong>, Tasnim Rahman, Md. Shamsuzzoha Bayzid</p>
+          <p class="venue">RECOMB Comparative Genomics Workshop, 2024.</p>
+        </div>
+        <div class="pub-links">
+          <a href="#" aria-disabled="true">PDF</a>
+          <a href="#" aria-disabled="true">Slides</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>LiftSafe</h3>
+          <p>Single-IMU early-alert system forecasting next-rep kinematics and safety (bench, overhead, lateral).</p>
+          <div class="tags"><span>IMU</span><span>Forecasting</span><span>Safety</span></div>
+        </div>
+        <div class="card">
+          <h3>Sleep Efficiency Modeling</h3>
+          <p>Predicting sleep efficiency from activity, location, and screen-time features; personalized recommendations.</p>
+          <div class="tags"><span>Time-series</span><span>Personalization</span></div>
+        </div>
+        <div class="card">
+          <h3>ICD Coding Assistant</h3>
+          <p>Human-in-the-loop pipeline to boost recall on rare codes via re-ranking and verification.</p>
+          <div class="tags"><span>Medical NLP</span><span>ICD</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
       <h2>Experience</h2>
-      <ul>
-        <li><strong>Research Assistant</strong>, Stony Brook University</li>
-        <li><strong>Teaching Assistant</strong>, Stony Brook University</li>
-        <li><strong>Lecturer</strong>, United International University (Dhaka)</li>
+      <ul class="timeline">
+        <li>
+          <strong>Research Assistant</strong> — Stony Brook University (2023–present)
+        </li>
+        <li>
+          <strong>Lecturer</strong> — United International University (2021–2023)
+        </li>
+        <li>
+          <strong>Teaching Assistant</strong> — BUET (2019–2020)
+        </li>
       </ul>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <p>Python, PyTorch, TensorFlow, Scikit-learn, Signal Processing, IMU data, MATLAB, OpenCV, SQL, JavaScript, Git, Django, Jupyter.</p>
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul>
+        <li>Network Security (CSE508), Spring 2024 — Lab sessions, tooling, and assignments.</li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Awards & Leadership</h2>
+    <section id="service">
+      <h2>Service & Leadership</h2>
       <ul>
-        <li>Ada Lovelace Datathon — First Runner-Up (2021), Second Runner-Up (2022)</li>
+        <li>Secretary, Bangladesh Graduate Students Association — Stony Brook (2024–present)</li>
         <li>Chair, IEEE Computer Society BUET (2021–2022)</li>
       </ul>
     </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Adiba Shaira · Last updated <time id="lastUpdated"></time></span>
+    </footer>
   </main>
 
-  <footer class="container footer">
-    <span>© <span id="year"></span> Adiba Shaira</span>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

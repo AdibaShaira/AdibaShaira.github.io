@@ -8,7 +8,7 @@ The site is plain HTML, CSS and a little JavaScript. There is no build step.
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The whole site: about, news, research, publications, experience, education, projects, honors, skills, contact |
+| `index.html` | The whole site: intro, news, research, publications, experience, education, projects, honors, skills, contact |
 | `assets/css/site.css` | Styles, including light and dark themes |
 | `assets/js/site.js` | Theme toggle, phone menu, and section highlighting in the nav |
 | `assets/fonts/` | Self-hosted Newsreader and IBM Plex Sans (SIL Open Font License) |

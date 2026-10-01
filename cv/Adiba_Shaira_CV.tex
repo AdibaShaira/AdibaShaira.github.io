@@ -1,0 +1,179 @@
+% Adiba Shaira - CV
+% Compiles on Overleaf with pdfLaTeX (Menu > Compiler > pdfLaTeX). One page, US letter.
+
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.0 cm,
+    bottom=1.0 cm,
+    left=1.7 cm,
+    right=1.7 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Adiba Shaira - CV},
+    pdfauthor={Adiba Shaira},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{bookmark}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure machine-readable PDF:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+\fi
+
+\usepackage{charter}
+
+% Settings:
+\raggedright
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.12 cm}{0.08 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.04 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+% Entry line: title text flows first, date follows on the same line (correct ATS reading order)
+\newcommand{\entry}[2]{\par\noindent #1 \hfill #2\par}
+
+% Publication entry: title, authors, venue
+\newcommand{\publication}[3]{\par\noindent\textbf{#1}\par\noindent #2. #3\par}
+\newcommand{\me}{\textbf{Adiba Shaira}}
+
+% Separator for the contact lines
+\newcommand{\sep}{\kern 5.0 pt$|$\kern 5.0 pt}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.35}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+\begin{document}
+
+\begin{header}
+    \fontsize{25 pt}{25 pt}\selectfont Adiba Shaira
+
+    \vspace{3 pt}
+
+    \normalsize
+    \mbox{Stony Brook, NY}\sep%
+    \mbox{+1 (934) 451-9631}\sep%
+    \mbox{\hrefWithoutArrow{mailto:adibashairarifa@gmail.com}{adibashairarifa@gmail.com}}%
+    \\
+    \mbox{\hrefWithoutArrow{https://adibashaira.github.io}{adibashaira.github.io}}\sep%
+    \mbox{\hrefWithoutArrow{https://linkedin.com/in/adiba-shaira}{linkedin.com/in/adiba-shaira}}\sep%
+    \mbox{\hrefWithoutArrow{https://github.com/AdibaShaira}{github.com/AdibaShaira}}%
+\end{header}
+
+\vspace{-0.2 cm}
+
+% ---------- Summary ----------
+\section{Summary}
+Ph.D. candidate in Computer Science specializing in wearable health sensing, multimodal time-series machine learning, and Large Language Model (LLM) applications in digital health. Hands-on experience building end-to-end pipelines from raw physiological signals to interactive health insights.
+
+% ---------- Education ----------
+\section{Education}
+
+\entry{\textbf{Ph.D. in Computer Science}, Stony Brook University (Candidate)}{Aug 2023 -- Aug 2027 (expected)}
+\entry{\textbf{M.S. in Computer Science}, Stony Brook University, GPA: 3.95/4.00}{Dec 2025}
+\begin{highlights}
+    \item \href{https://picasso.cs.stonybrook.edu/}{\underline{PiCASSo Lab}}; advised by \href{https://www3.cs.stonybrook.edu/~jain/}{\underline{Prof.\ Shubham Jain}}
+    \item \textbf{Research Areas:} Health Sensing, Wearable Computing, Time-Series Modeling, Digital Phenotyping, Machine Learning, Large Language Models (LLMs), Explainable Machine Learning
+\end{highlights}
+\entry{\textbf{B.Sc. in Computer Science and Engineering}, Bangladesh University of Engineering and Technology}{May 2022}
+
+% ---------- Experience ----------
+\section{Experience}
+
+\entry{\textbf{Research Assistant}, Stony Brook University}{May 2024 -- Present}
+\begin{highlights}
+    \item Built LiftSafe, a machine learning system that predicts unsafe strength-training repetitions one repetition ahead from a single arm-worn Inertial Measurement Unit (IMU), reaching 87\% balanced accuracy in a 24-participant study with EMG ground truth; published at IEEE/ACM CHASE 2026.
+    \item Built CareQA, a multi-agent LLM system that answers caregivers' natural-language questions about their autistic child's sleep, activity, and physiological signals using passively sensed data from the \href{https://www.sfari.org/resource/simons-sleep-project/}{\underline{Simons Sleep Project}}.
+    \item Now extending CareQA with an interactive visualization dashboard that pairs a child's sensor trends with LLM-generated explanations, and a caregiver study that grounds the system in caregivers' own questions.
+    \item Designing passive smartphone-based sleep sensing for PTSD monitoring in a World Trade Center 9/11 first-responder cohort: extracting sleep metrics from accelerometer and screen-state data and correlating them with clinical PCL scores via longitudinal statistical modeling.
+\end{highlights}
+
+\entry{\textbf{Teaching Assistant}, Stony Brook University: \href{https://www3.cs.stonybrook.edu/~skiena/373/}{\underline{CSE 373, Analysis of Algorithms}}}{Aug 2023 -- May 2024}
+
+\entry{\textbf{Lecturer}, United International University, Dhaka, Bangladesh}{May 2022 -- July 2023}
+\begin{highlights}
+    \item Taught Human-Computer Interaction (HCI), Analysis of Algorithms, and Computer Networks.
+\end{highlights}
+
+% ---------- Publications ----------
+\section{Publications}
+
+\publication{CareQA: Multi-Agent Sensemaking to Answer Caregiver Queries from Passive Sensing Data in Autism Care}
+{\me, Michelle S. Ballan, Shubham Jain}
+{\textit{Under submission at IEEE PerCom 2027.}}
+
+\vspace{0.08 cm}
+\publication{\href{https://picasso.cs.stonybrook.edu/bibcite/reference/47}{LiftSafe: Predicting Unsafe Repetitions in Strength Training using a Single Wearable Sensor}}
+{\me, Hunter J. Bennett, Shubham Jain}
+{\textit{IEEE/ACM Conference on Connected Health: Applications, Systems, and Engineering Technologies (CHASE)}, 2026.}
+
+\vspace{0.08 cm}
+\publication{\href{https://dl.acm.org/doi/10.1007/978-3-031-58072-7_6}{Gene Tree Parsimony in the Presence of Gene Duplication, Loss, and Incomplete Lineage Sorting}}
+{Prottoy Saha, Md.\ Shamiul Islam, Tasnim Rahman, \me, Kazi Noshin, Rezwana Reaz, Md.\ Shamsuzzoha Bayzid}
+{\textit{RECOMB International Workshop on Comparative Genomics}, Springer Nature, pp.\ 110--128, 2024.}
+
+% ---------- Other Projects ----------
+\section{Other Projects}
+
+\entry{\textbf{\href{https://github.com/jamaliasultana/sleep_anomaly}{Using a Single Device to Predict Sleep Efficiency and Next-Day's Mood}}}{2024}
+Modeled next-day sleep efficiency and mood from single-wearable time-series data in the GLOBEM dataset. \textit{Key Techniques:} Python, Pandas, NumPy, Scikit-learn, LSTM, Autoencoder models (PyTorch/TensorFlow)
+
+\vspace{0.08 cm}
+\entry{\textbf{\href{https://github.com/shahrarfatemi/global_disaster_visualizer}{Global Disaster Visualizer}}}{2023}
+Interactive web-based visualization of global disaster data. \textit{Key Techniques:} D3.js, JavaScript, React, Python
+
+% ---------- Awards ----------
+\section{Awards}
+
+\entry{\textbf{NSF Student Travel Award}, IEEE/ACM CHASE}{2026}
+\entry{\textbf{Distinguished Travel Award}, Graduate Student Organization, Stony Brook University}{2026}
+
+% ---------- Technical Skills ----------
+\section{Technical Skills}
+
+\textbf{Languages:} Python, Java, C/C++, SQL, JavaScript
+
+\textbf{Machine Learning \& Deep Learning:} PyTorch, TensorFlow, Keras, Scikit-learn, Hugging Face Transformers, SHAP, Large Language Models (LLMs), Multi-Agent LLM Systems, Retrieval-Augmented Generation (RAG)
+
+\textbf{Sensing \& Data:} IMU data processing, physiological signals (PPG, EDA, EEG), OpenCV, MATLAB, Pandas, NumPy
+
+\textbf{Tools:} Git, Jupyter, Wireshark, Django, Bootstrap, MySQL, MongoDB
+
+\end{document}

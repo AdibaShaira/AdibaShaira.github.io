@@ -1,170 +1,461 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adiba Shaira — PhD Student</title>
-  <meta name="description" content="PhD student at Stony Brook University. Wearable sensing, health sensing, and human performance analytics." />
-  <link rel="icon" href="images/adiba_headshot_new.JPG" />
-  <link rel="preload" as="image" href="images/adiba_headshot_new.JPG" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Adiba Shaira — PhD Student" />
-  <meta property="og:description" content="Wearable sensing & human performance analytics." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/adiba_headshot_new.JPG" />
-  <meta property="og:url" content="https://AdibaShaira.github.io" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adiba Shaira | Health Sensing, Stony Brook University</title>
+  <meta name="description" content="Adiba Shaira is a Ph.D. candidate in Computer Science at Stony Brook University. She builds wearable and mobile health sensing systems, from predicting unsafe strength-training repetitions (LiftSafe) to LLM-based sensemaking for caregivers in autism care (CareQA).">
+  <meta name="author" content="Adiba Shaira">
+  <link rel="canonical" href="https://adibashaira.github.io/">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1520" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Adiba Shaira">
+  <meta property="og:description" content="Ph.D. candidate in Computer Science at Stony Brook University, building systems that turn passive sensor data into insights people can act on.">
+  <meta property="og:url" content="https://adibashaira.github.io/">
+  <meta property="og:image" content="https://adibashaira.github.io/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Adiba Shaira, Ph.D. candidate in Computer Science at Stony Brook University">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adiba Shaira",
+    "url": "https://adibashaira.github.io/",
+    "image": "https://adibashaira.github.io/assets/img/adiba-shaira.jpg",
+    "jobTitle": "Ph.D. Candidate in Computer Science",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Stony Brook University" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Stony Brook University" },
+      { "@type": "CollegeOrUniversity", "name": "Bangladesh University of Engineering and Technology" }
+    ],
+    "knowsAbout": ["Health sensing", "Wearable computing", "Time-series machine learning", "Large language models", "Digital phenotyping"],
+    "sameAs": ["https://www.linkedin.com/in/adiba-shaira", "https://github.com/AdibaShaira"]
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6CZ4WPCNH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D6CZ4WPCNH');
+  </script>
 </head>
 <body>
-  
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" role="complementary">
-    <img src="images/adiba_headshot_new.JPG" alt="Portrait of Adiba Shaira" class="avatar" loading="eager" decoding="async" />
-    <h1 class="name">Adiba Shaira</h1>
-    <p class="role">PhD @ Stony Brook</p>
-    <p class="blurb">Wearable sensing & human performance analytics.</p>
-    <div class="contact">
-  adibashairarifa@gmail.com
-      <a href="https://github.com/AdibaShaira" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/adiba-shaira" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="topbar__name" href="#top">Adiba Shaira</a>
+      <nav class="nav" id="site-nav" aria-label="Sections">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#research">Research</a></li>
+          <li><a class="nav__link" href="#publications">Publications</a></li>
+          <li><a class="nav__link" href="#news">News</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+          <li><a class="nav__link nav__link--cv" href="CV.pdf">CV</a></li>
+        </ul>
+      </nav>
+      <div class="topbar__tools">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M12 3.75a8.25 8.25 0 0 1 0 16.5z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open section menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
-  </aside>
+  </header>
 
-  <!-- Main Content -->
-  <main id="main" class="content" role="main">
-    <nav class="topnav">
-      <a href="#about">About</a>
-      <a href="#projects">Research Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#technical-projects">Technical Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#service">Service</a>
-    </nav>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-<p>I'm a Computer Science PhD student in the <a href="https://picasso.cs.stonybrook.edu/" target="_blank" rel="noopener">PiCASSo Lab</a> advised by <a href="https://www3.cs.stonybrook.edu/~jain/" target="_blank" rel="noopener">Prof. Shubham Jain</a>. My research focuses on passive health sensing and intelligent inference from wearable and mobile data, with an emphasis on integrating large language models into time-series analysis pipelines. I develop systems that extract clinically meaningful signals from continuously collected sensor data to model human health states — spanning physical performance, behavioral patterns, and mental well-being.</p>
- <li><strong>Research areas:</strong> Health Sensing, Wearable Computing, Time-Series ML, LLM-Integrated Pipelines, Digital Phenotyping</li>  
-       
-      </ul>
-    </section>
-
-<!-- Research Projects -->
-<section id="projects">
-  <h2>Research Projects</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Wearable-based Detection of Muscle Failure Onset</h3>
-      <p>Designed and validated wearable novel metrics to analyze performance in strength training complementing traditional methods.</p>
-      <p class="submission-status"><strong><em>Under submission at a multidisciplinary journal</em></strong></p>
-    </div>
-    <div class="card">
-      <h3>Predicting Behavioral Dysregulation in ASD Children through Passively Sensed Data</h3>
-      <p>Developing a passive sensing pipeline to predict behavioral dysregulation episodes in children with Autism Spectrum Disorder using multimodal wearable and mobile data.</p>
-     
-    </div>
-    <div class="card">
-      <h3>Multimodal Digital Phenotyping for PTSD Patients</h3>
-      <p>Building multimodal digital phenotyping pipelines leveraging passively sensed behavioral signals to model PTSD symptom trajectories and support clinical decision-making.</p>
-      
-    </div>
-  </div>
-</section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <article class="pub">
-        <h3>LiftSafe: Predicting Unsafe Repetitions in Strength Training using a Single Wearable Sensor</h3>
-        <p><strong>Adiba Shaira</strong> (Stony Brook University), Hunter J. Bennett (Old Dominion University), Shubham Jain (Stony Brook University)</p>
-        <p class="venue">IEEE/ACM CHASE 2026</p>
-      </article>
-      <article class="pub">
-        <h3>Gene Tree Parsimony in the Presence of Gene Duplication, Loss, and Incomplete Lineage Sorting</h3>
-        <p>Prottoy Saha, Md. Shamiul Islam, Tasnim Rahman, <strong>Adiba Shaira</strong>, Kazi Noshin, Rezwana Reaz, Md. Shamsuzzoha Bayzid</p>
-        <p class="venue">RECOMB Comparative Genomics Workshop, 2024</p>
-        <p><a href="https://dl.acm.org/doi/10.1007/978-3-031-58072-7_6" target="_blank" rel="noopener">View publication (ACM DOI)</a></p>
-      </article>
-    </section>
-
-    <!-- Technical Projects -->
-    <section id="technical-projects">
-      <h2>Technical Projects</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Using a Single Device to Predict Sleep Efficiency and Next-Day's Mood</h3>
-          <p>This project builds a single-device, real-world sleep analytics and mood prediction system using only smartphone-based behavioral signals. We detect drops in sleep efficiency before they happen and study their link to next-day mood — enabling proactive health awareness and mental-wellbeing support. This is likely the first work to predict sudden drops in sleep efficiency (sleep anomalies) using only smartphone multimodal data.</p>
-          <p><a href="https://github.com/jamaliasultana/sleep_anomaly" target="_blank" rel="noopener">View Project</a> | <em>2024</em></p>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="name">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__text">
+            <h1 class="hero__name" id="name">Adiba Shaira</h1>
+            <p class="hero__role">Ph.D. candidate in Computer Science, Stony Brook University</p>
+            <p class="hero__role"><a href="https://picasso.cs.stonybrook.edu/">PiCASSo Lab</a>, advised by <a href="https://www3.cs.stonybrook.edu/~jain/">Prof. Shubham Jain</a></p>
+            <p class="hero__lede">I build systems that turn passive sensor data into insights people can act on.</p>
+            <ul class="hero__links">
+              <li><a class="button" href="CV.pdf">CV (PDF)</a></li>
+              <li><a href="mailto:adibashairarifa@gmail.com">adibashairarifa@gmail.com</a></li>
+              <li><a href="https://www.linkedin.com/in/adiba-shaira" rel="me">LinkedIn</a></li>
+              <li><a href="https://github.com/AdibaShaira" rel="me">GitHub</a></li>
+            </ul>
+          </div>
+          <figure class="hero__photo">
+            <picture>
+              <source srcset="assets/img/adiba-shaira.webp" type="image/webp">
+              <img src="assets/img/adiba-shaira.jpg" width="720" height="900" alt="Portrait of Adiba Shaira" fetchpriority="high">
+            </picture>
+          </figure>
         </div>
-        <div class="card">
-          <h3>Global Disaster Visualizer</h3>
-          <p>This project presents an interactive visual exploration of global natural disasters from 2010–2021, based on the International Disaster Database (EM-DAT). It highlights spatio-temporal patterns, affected regions, disaster frequency, casualties, and seasonal trends across countries and disaster types.</p>
-          <p><a href="https://github.com/shahrarfatemi/global_disaster_visualizer" target="_blank" rel="noopener">View Project</a> | <em>2023</em></p>
-        </div>
-        <div class="card">
-          <h3>Corona in Bangladesh</h3>
-          <p>A comprehensive data visualization and tracking platform for COVID-19 cases in Bangladesh, providing real-time insights and analytics during the pandemic.</p>
-          <p><a href="https://coronainbangladesh.com/" target="_blank" rel="noopener">Visit Website</a></p>
-        </div>
-        <div class="card">
-          <h3>Healthway — Online Diagnostic and Consultation Center</h3>
-          <p>This project was developed during the COVID-19 pandemic to enable safe, contact-free medical diagnostics and consultation. The platform allows patients and healthcare providers to collaborate remotely, reducing the risk of virus transmission while ensuring timely medical care.</p>
-          <p><a href="https://github.com/meherafrozsworna/online_diagostics_and_consultant_center" target="_blank" rel="noopener">View Project</a> | <em>2021</em></p>
+
+        <div class="signal" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <defs>
+              <linearGradient id="signal-gradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0" class="signal__stop-raw"/>
+                <stop offset="0.6" class="signal__stop-raw"/>
+                <stop offset="0.9" class="signal__stop-insight"/>
+                <stop offset="1" class="signal__stop-insight"/>
+              </linearGradient>
+            </defs>
+            <path class="signal__trace" pathLength="1" d="M0.0 72.0 L2.5 71.9 L5.0 71.9 L7.5 72.0 L10.0 72.6 L12.5 72.0 L15.0 71.8 L17.5 71.3 L20.0 71.8 L22.5 72.9 L25.0 72.2 L27.5 71.8 L30.0 71.0 L32.5 73.0 L35.0 70.4 L37.5 69.0 L40.0 66.6 L42.5 66.3 L45.0 63.1 L47.5 59.1 L50.0 55.5 L52.5 52.0 L55.0 51.0 L57.5 47.8 L60.0 45.2 L62.5 40.4 L65.0 40.4 L67.5 39.3 L70.0 38.6 L72.5 37.1 L75.0 38.5 L77.5 40.6 L80.0 40.9 L82.5 42.7 L85.0 44.0 L87.5 48.7 L90.0 51.6 L92.5 55.9 L95.0 56.6 L97.5 59.6 L100.0 63.3 L102.5 67.1 L105.0 68.5 L107.5 69.0 L110.0 71.9 L112.5 72.1 L115.0 72.4 L117.5 70.6 L120.0 72.1 L122.5 72.1 L125.0 73.4 L127.5 72.2 L130.0 70.9 L132.5 71.0 L135.0 72.3 L137.5 73.7 L140.0 70.9 L142.5 70.4 L145.0 68.8 L147.5 68.3 L150.0 64.1 L152.5 62.0 L155.0 59.2 L157.5 57.0 L160.0 53.9 L162.5 49.5 L165.0 46.3 L167.5 43.6 L170.0 44.2 L172.5 41.0 L175.0 38.9 L177.5 36.8 L180.0 38.6 L182.5 38.6 L185.0 38.9 L187.5 40.3 L190.0 42.4 L192.5 45.6 L195.0 46.8 L197.5 50.0 L200.0 51.5 L202.5 57.1 L205.0 60.4 L207.5 63.0 L210.0 63.3 L212.5 66.4 L215.0 70.0 L217.5 71.0 L220.0 71.8 L222.5 71.2 L225.0 72.8 L227.5 71.6 L230.0 72.4 L232.5 70.9 L235.0 71.9 L237.5 72.6 L240.0 73.3 L242.5 71.6 L245.0 69.5 L247.5 70.8 L250.0 70.7 L252.5 70.7 L255.0 68.0 L257.5 68.6 L260.0 66.7 L262.5 65.5 L265.0 61.9 L267.5 58.9 L270.0 56.7 L272.5 55.7 L275.0 55.4 L277.5 52.8 L280.0 53.4 L282.5 53.3 L285.0 53.4 L287.5 48.1 L290.0 44.9 L292.5 42.5 L295.0 42.7 L297.5 43.5 L300.0 44.8 L302.5 47.2 L305.0 48.1 L307.5 50.1 L310.0 47.8 L312.5 46.7 L315.0 45.7 L317.5 49.3 L320.0 50.7 L322.5 52.3 L325.0 55.0 L327.5 58.7 L330.0 62.1 L332.5 62.1 L335.0 63.1 L337.5 62.2 L340.0 64.7 L342.5 65.8 L345.0 68.0 L347.5 68.4 L350.0 71.1 L352.5 73.2 L355.0 72.4 L357.5 71.1 L360.0 70.4 L362.5 73.0 L365.0 72.4 L367.5 72.9 L370.0 71.1 L372.0 72.0 L373.6 72.0 L375.2 71.8 L376.8 70.9 L378.4 68.5 L380.0 62.9 L381.6 54.3 L383.2 45.6 L384.8 42.0 L386.4 46.0 L388.0 54.7 L389.6 63.2 L391.2 68.3 L392.8 69.9 L394.4 69.2 L396.0 66.9 L397.6 63.8 L399.2 60.8 L400.8 59.4 L402.4 60.3 L404.0 62.9 L405.6 66.2 L407.2 68.9 L408.8 70.6 L410.4 71.5 L412.0 71.9 L413.6 72.0 L415.2 72.0 L416.8 72.0 L418.4 72.0 L420.0 72.0 L421.6 72.0 L423.2 72.0 L424.8 72.0 L426.4 72.0 L428.0 72.0 L429.6 72.0 L431.2 72.0 L432.8 71.8 L434.4 71.3 L436.0 69.3 L437.6 64.7 L439.2 56.6 L440.8 47.5 L442.4 42.2 L444.0 44.3 L445.6 52.4 L447.2 61.3 L448.8 67.4 L450.4 69.8 L452.0 69.6 L453.6 67.6 L455.2 64.6 L456.8 61.4 L458.4 59.6 L460.0 59.9 L461.6 62.2 L463.2 65.4 L464.8 68.3 L466.4 70.3 L468.0 71.4 L469.6 71.8 L471.2 71.9 L472.8 72.0 L474.4 72.0 L476.0 72.0 L477.6 72.0 L479.2 72.0 L480.8 72.0 L482.4 72.0 L484.0 72.0 L485.6 72.0 L487.2 72.0 L488.8 72.0 L490.4 71.9 L492.0 71.5 L493.6 70.0 L495.2 66.1 L496.8 58.9 L498.4 49.6 L500.0 42.9 L501.6 43.1 L503.2 50.1 L504.8 59.3 L506.4 66.2 L508.0 69.5 L509.6 69.8 L511.2 68.2 L512.8 65.4 L514.4 62.2 L516.0 59.9 L517.6 59.6 L519.2 61.5 L520.8 64.6 L522.4 67.7 L524.0 69.9 L525.6 71.2 L527.2 71.7 L528.8 71.9 L530.4 72.0 L532.0 72.0 L533.6 72.0 L535.2 72.0 L536.8 72.0 L538.4 72.0 L540.0 72.0 L541.6 72.0 L543.2 72.0 L544.8 72.0 L546.4 72.0 L548.0 71.9 L549.6 71.6 L551.2 70.5 L552.8 67.4 L554.4 61.0 L556.0 51.9 L557.6 44.1 L559.2 42.3 L560.8 47.9 L562.4 57.1 L564.0 64.8 L565.6 69.0 L567.2 70.0 L568.8 68.8 L570.4 66.2 L572.0 62.9 L573.6 60.3 L575.2 59.4 L576.8 60.8 L578.4 63.8 L580.0 67.0 L581.6 69.5 L583.2 70.9 L584.8 71.6 L586.4 71.9 L588.0 72.0 L589.6 72.0 L591.2 72.0 L592.8 72.0 L594.4 72.0 L596.0 72.0 L597.6 72.0 L599.2 72.0 L600.8 72.0 L602.4 72.0 L604.0 72.0 L605.6 72.0 L607.2 71.8 L608.8 70.9 L610.4 68.5 L612.0 62.9 L613.6 54.3 L615.2 45.6 L616.8 42.0 L618.4 46.0 L620.0 54.7 L621.6 63.2 L623.2 68.3 L624.8 69.9 L626.4 69.2 L628.0 66.9 L629.6 63.8 L631.2 60.8 L632.8 59.4 L634.4 60.3 L636.0 62.9 L637.6 66.2 L639.2 68.9 L640.8 70.6 L642.4 71.5 L644.0 71.9 L645.6 72.0 L647.2 72.0 L648.8 72.0 L650.4 72.0 L652.0 72.0 L653.6 72.0 L655.2 72.0 L656.8 72.0 L658.4 72.0 L660.0 72.0 L661.6 72.0 L663.2 72.0 L664.8 71.8 L666.4 71.3 L668.0 69.3 L669.6 64.7 L671.2 56.6 L672.8 47.5 L674.4 42.2 L676.0 44.3 L677.6 52.4 L679.2 61.3 L680.8 67.4 L682.4 69.8 L684.0 69.6 L685.6 67.6 L687.2 64.6 L688.8 61.4 L690.4 59.6 L692.0 59.9 L693.6 62.2 L695.2 65.4 L696.8 68.3 L698.4 70.3 L700.0 71.4 L701.6 71.8 L703.2 71.9 L704.8 72.0 L706.4 72.0 L708.0 72.0 L709.6 72.0 L711.2 72.0 L712.8 72.0 L714.4 72.0 L716.0 72.0 L717.6 72.0 L719.2 72.0 L722.1 70.8 L724.9 67.6 L727.8 63.1 L730.6 58.0 L733.5 52.9 L736.3 48.4 L739.2 45.2 L742.0 44.0 L752.0 44.0 L752.0 70.0 L762.0 70.0 L762.0 84.0 L786.0 84.0 L786.0 98.0 L822.0 98.0 L822.0 84.0 L842.0 84.0 L842.0 57.0 L860.0 57.0 L860.0 84.0 L888.0 84.0 L888.0 98.0 L910.0 98.0 L910.0 84.0 L940.0 84.0 L940.0 57.0 L966.0 57.0 L966.0 84.0 L984.0 84.0 L984.0 70.0 L994.0 70.0 L994.0 44.0 L1002.0 44.0 L1004.5 47.4 L1007.0 50.4 L1009.5 53.2 L1012.0 55.8 L1014.5 58.1 L1017.0 60.2 L1019.5 62.0 L1022.0 63.7 L1024.5 65.2 L1027.0 66.4 L1029.5 67.6 L1032.0 68.5 L1034.5 69.3 L1037.0 70.0 L1039.5 70.5 L1042.0 71.0 L1044.5 71.3 L1047.0 71.6 L1049.5 71.7 L1052.0 71.9 L1054.5 71.9 L1057.0 72.0 L1059.5 72.0 L1062.0 72.0 L1166.0 72.0"/>
+            <circle class="signal__dot" cx="1172" cy="72" r="5.5"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul class="timeline">
-        <li><strong>Research Assistant</strong> — Stony Brook University (2024–Present)</li>
-        <li><strong>Teaching Assistant</strong> — Stony Brook University (2023–2024)</li>
-        <li><strong>Lecturer</strong> — United International University (2021–2023)</li>
-        
-      </ul>
+    <section class="section section--band" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="section-title" id="about-title">About</h2>
+        <div class="row about">
+          <div class="row__meta">
+            <h3 class="meta-title">Research interests</h3>
+            <ul class="interest-list">
+              <li>Health sensing</li>
+              <li>Wearable computing</li>
+              <li>Time-series modeling</li>
+              <li>Digital phenotyping</li>
+              <li>LLM agents for health data</li>
+              <li>Explainable machine learning</li>
+            </ul>
+          </div>
+          <div class="row__body prose">
+            <p>I'm a fourth-year Ph.D. candidate in Computer Science at Stony Brook University, where I work in the <a href="https://picasso.cs.stonybrook.edu/">PiCASSo Lab</a> with <a href="https://www3.cs.stonybrook.edu/~jain/">Prof. Shubham Jain</a>. My research spans wearable health sensing, multimodal physiological time-series modeling, and LLM-based agents for digital health.</p>
+            <p>I focus on situations where a timely, understandable answer matters. LiftSafe warns lifters about an unsafe repetition before they perform it, using one arm-worn sensor. CareQA helps caregivers of autistic children make sense of their child's sleep and physiological data by asking questions in plain language. With a cohort of World Trade Center 9/11 first responders, I measure sleep for PTSD monitoring using only the phone they already carry.</p>
+            <p>Before Stony Brook, I earned a B.Sc. in Computer Science and Engineering from BUET and taught HCI, algorithms, and computer networks as a lecturer at United International University in Dhaka. I received my M.S. from Stony Brook in December 2025 on the way to the Ph.D.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-    <!-- Service -->
-    <section id="service">
-      <h2>Service & Leadership</h2>
-      <ul>
-         <li>Vice President, Bangladesh Graduate Students Association — Stony Brook (2024–Present)</li>
-        <li>Secretary, Bangladesh Graduate Students Association — Stony Brook (2024–2025)</li>
-        <li>Chairperson, IEEE Computer Society BUET (2021–2022)</li>
-      </ul>
-    </section>
-    
-      <!-- Awards -->
-      <section id="awards">
-        <h2>Awards</h2>
-        <ul>
-          <li>First Runner Up – Ada Lovelace Datathon (BDOC 2021) – ML for Covid-19 impact analysis</li>
-          <li>Second Runner Up – Ada Lovelace Datathon (BDOC 2022) – Taxi demand prediction</li>
-          <li>Dean's List Award – 2021</li>
+    <section class="section" id="news" aria-labelledby="news-title">
+      <div class="container">
+        <h2 class="section-title" id="news-title">News</h2>
+        <ul class="rows rows--tight">
+          <li class="row">
+            <p class="row__meta"><time datetime="2026-09">Sep 2026</time></p>
+            <p class="row__body">CareQA, our paper on multi-agent sensemaking for caregivers in autism care, is under submission at IEEE PerCom 2027.</p>
+          </li>
+          <li class="row">
+            <p class="row__meta"><time datetime="2026-08">Aug 2026</time></p>
+            <p class="row__body">Presented LiftSafe at IEEE/ACM CHASE 2026 in Pittsburgh, supported by an NSF Student Travel Award and a Distinguished Travel Award from Stony Brook's Graduate Student Organization.</p>
+          </li>
+          <li class="row">
+            <p class="row__meta"><time datetime="2025-12">Dec 2025</time></p>
+            <p class="row__body">Received my M.S. in Computer Science from Stony Brook University.</p>
+          </li>
+          <li class="row">
+            <p class="row__meta"><time datetime="2024-04">Apr 2024</time></p>
+            <p class="row__body">Our paper on gene tree parsimony was published at RECOMB Comparative Genomics 2024.</p>
+          </li>
+          <li class="row">
+            <p class="row__meta"><time datetime="2023-08">Aug 2023</time></p>
+            <p class="row__body">Started my Ph.D. in Computer Science at Stony Brook University.</p>
+          </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <span>© <span id="year"></span> Adiba Shaira</span>
-    </footer>
+    <section class="section section--band" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <h2 class="section-title" id="research-title">Research</h2>
+
+        <article class="row project" aria-labelledby="careqa-title">
+          <div class="row__meta">
+            <p><span class="status status--review">Under submission</span></p>
+            <p>IEEE PerCom 2027</p>
+          </div>
+          <div class="row__body">
+            <h3 class="project__title" id="careqa-title">CareQA: sensemaking for caregivers in autism care</h3>
+            <p>Caregivers of autistic children, especially children who are minimally speaking, often have to work out on their own what was behind a restless night or a hard day. CareQA lets them ask about it in plain language, such as <q>why was his sleep so restless last night?</q>, and answers from the child's own passively sensed data: wristband physiology, EEG-based sleep staging, an under-mattress sleep sensor, and caregiver diaries from the <a href="https://www.sfari.org/resource/simons-sleep-project/">Simons Sleep Project</a>. CareQA plans each analysis, computes the evidence from the child's record, and explains what the data shows without giving medical advice.</p>
+            <div class="now">
+              <p><strong>Now:</strong> we are building an interactive dashboard that pairs visualizations of a child's sensor data with CareQA's explanations, and designing a caregiver study around it so that caregivers' own questions shape the next version of the system.</p>
+            </div>
+            <p class="project__links"><a href="#pub-careqa">See the publication entry</a></p>
+          </div>
+        </article>
+
+        <article class="row project" aria-labelledby="liftsafe-title">
+          <div class="row__meta">
+            <p><span class="status status--published">Published</span></p>
+            <p>IEEE/ACM CHASE 2026</p>
+          </div>
+          <div class="row__body">
+            <h3 class="project__title" id="liftsafe-title">LiftSafe: catching unsafe lifts one repetition early</h3>
+            <p>As fatigue builds during a set, lifting form degrades and the risk of injury rises. LiftSafe predicts whether the next repetition will be safe or unsafe from a single inertial measurement unit (IMU) worn on the upper arm, so a lifter can be warned before it happens. It combines time-series forecasting with contrastive learning and a progression-aware fusion module that tracks fatigue across the set. In a 24-participant study of bench, overhead, and lateral presses with EMG ground truth, LiftSafe reached 87% balanced accuracy under leave-one-subject-out validation.</p>
+            <p class="project__links"><a href="https://picasso.cs.stonybrook.edu/bibcite/reference/47">Read the LiftSafe paper</a></p>
+          </div>
+        </article>
+
+        <article class="row project" aria-labelledby="ptsd-title">
+          <div class="row__meta">
+            <p><span class="status status--ongoing">Ongoing</span></p>
+            <p>2025&ndash;present</p>
+          </div>
+          <div class="row__body">
+            <h3 class="project__title" id="ptsd-title">Passive sleep sensing for PTSD</h3>
+            <p>Disrupted sleep is a core symptom of PTSD, but tracking it usually takes a dedicated device or a sleep diary. Working with a World Trade Center 9/11 first-responder cohort, I extract sleep metrics passively from smartphone accelerometer and screen-state data and relate them to clinical PCL scores through longitudinal statistical modeling.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="container">
+        <h2 class="section-title" id="publications-title">Publications</h2>
+        <ol class="rows pubs" reversed>
+          <li class="row pub" id="pub-careqa">
+            <div class="row__meta">
+              <p class="pub__venue-short">PerCom 2027</p>
+              <p><span class="status status--review">Under submission</span></p>
+            </div>
+            <div class="row__body">
+              <h3 class="pub__title">CareQA: Multi-Agent Sensemaking to Answer Caregiver Queries from Passive Sensing Data in Autism Care</h3>
+              <p class="pub__authors"><strong>Adiba Shaira</strong>, Michelle S. Ballan, Shubham Jain</p>
+              <p class="pub__venue">IEEE International Conference on Pervasive Computing and Communications (PerCom), 2027. Under submission.</p>
+            </div>
+          </li>
+          <li class="row pub" id="pub-liftsafe">
+            <div class="row__meta">
+              <p class="pub__venue-short">CHASE 2026</p>
+            </div>
+            <div class="row__body">
+              <h3 class="pub__title"><a href="https://picasso.cs.stonybrook.edu/bibcite/reference/47">LiftSafe: Predicting Unsafe Repetitions in Strength Training using a Single Wearable Sensor</a></h3>
+              <p class="pub__authors"><strong>Adiba Shaira</strong>, Hunter J. Bennett, Shubham Jain</p>
+              <p class="pub__venue">IEEE/ACM Conference on Connected Health: Applications, Systems, and Engineering Technologies (CHASE), 2026.</p>
+              <p class="pub__links"><a href="https://picasso.cs.stonybrook.edu/bibcite/reference/47">Paper</a></p>
+              <p class="award">
+                <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.6 11.2 5 18l5-2.4 5 2.4-1.6-6.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                NSF Student Travel Award
+              </p>
+            </div>
+          </li>
+          <li class="row pub" id="pub-recomb">
+            <div class="row__meta">
+              <p class="pub__venue-short">RECOMB-CG 2024</p>
+            </div>
+            <div class="row__body">
+              <h3 class="pub__title"><a href="https://dl.acm.org/doi/10.1007/978-3-031-58072-7_6">Gene Tree Parsimony in the Presence of Gene Duplication, Loss, and Incomplete Lineage Sorting</a></h3>
+              <p class="pub__authors">Prottoy Saha, Md. Shamiul Islam, Tasnim Rahman, <strong>Adiba Shaira</strong>, Kazi Noshin, Rezwana Reaz, Md. Shamsuzzoha Bayzid</p>
+              <p class="pub__venue">RECOMB International Workshop on Comparative Genomics, Springer Nature, pp. 110&ndash;128, 2024.</p>
+              <p class="pub__links"><a href="https://dl.acm.org/doi/10.1007/978-3-031-58072-7_6">Paper</a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--band" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 class="section-title" id="experience-title">Experience and teaching</h2>
+        <ul class="rows">
+          <li class="row">
+            <p class="row__meta">May 2024 &ndash; present</p>
+            <div class="row__body">
+              <h3 class="entry__title">Research Assistant, PiCASSo Lab</h3>
+              <p class="entry__org">Stony Brook University</p>
+              <p>Wearable and mobile health sensing: LiftSafe, CareQA, and passive sleep sensing for PTSD.</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">Aug 2023 &ndash; May 2024</p>
+            <div class="row__body">
+              <h3 class="entry__title">Teaching Assistant</h3>
+              <p class="entry__org">Stony Brook University</p>
+              <p><a href="https://www3.cs.stonybrook.edu/~skiena/373/">CSE 373: Analysis of Algorithms</a></p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">May 2022 &ndash; Jul 2023</p>
+            <div class="row__body">
+              <h3 class="entry__title">Lecturer, Department of Computer Science and Engineering</h3>
+              <p class="entry__org">United International University, Dhaka, Bangladesh</p>
+              <p>Taught Human-Computer Interaction, Analysis of Algorithms, and Computer Networks.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="section-title section-title--next" id="education">Education</h2>
+        <ul class="rows">
+          <li class="row">
+            <p class="row__meta">2023&ndash;2027 (expected)</p>
+            <div class="row__body">
+              <h3 class="entry__title">Ph.D. in Computer Science</h3>
+              <p class="entry__org">Stony Brook University</p>
+              <p>Advisor: Prof. Shubham Jain</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">Dec 2025</p>
+            <div class="row__body">
+              <h3 class="entry__title">M.S. in Computer Science</h3>
+              <p class="entry__org">Stony Brook University</p>
+              <p>GPA 3.95/4.00, earned on the way to the Ph.D.</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">2017&ndash;2022</p>
+            <div class="row__body">
+              <h3 class="entry__title">B.Sc. in Computer Science and Engineering</h3>
+              <p class="entry__org">Bangladesh University of Engineering and Technology (BUET)</p>
+              <p>Thesis: <a href="files/Thesis.pdf">Fast and Accurate Species Tree Estimation using Consensus Methods</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 class="section-title" id="projects-title">Other projects</h2>
+        <ul class="rows">
+          <li class="row">
+            <p class="row__meta">2024</p>
+            <div class="row__body">
+              <h3 class="entry__title"><a href="https://github.com/jamaliasultana/sleep_anomaly">Predicting sleep efficiency and next-day mood from a single device</a></h3>
+              <p>Modeled next-day sleep efficiency and mood from single-device time-series data in the GLOBEM dataset.</p>
+              <p class="entry__tech">Python, scikit-learn, LSTM and autoencoder models in PyTorch and TensorFlow</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">2023</p>
+            <div class="row__body">
+              <h3 class="entry__title"><a href="https://github.com/shahrarfatemi/global_disaster_visualizer">Global Disaster Visualizer</a></h3>
+              <p>An interactive look at natural disasters worldwide from 2010 to 2021 (EM-DAT): where they struck, how often, and their human toll.</p>
+              <p class="entry__tech">D3.js, JavaScript, React, Python</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">2021</p>
+            <div class="row__body">
+              <h3 class="entry__title"><a href="https://github.com/meherafrozsworna/online_diagostics_and_consultant_center">Healthway</a></h3>
+              <p>An online diagnosis and consultation platform built during COVID-19 so patients and doctors could work together remotely.</p>
+            </div>
+          </li>
+          <li class="row">
+            <p class="row__meta">2020</p>
+            <div class="row__body">
+              <h3 class="entry__title"><a href="https://coronainbangladesh.com/">Corona in Bangladesh</a></h3>
+              <p>A COVID-19 information hub for Bangladesh, recognized by the Bangladesh government as a reliable source of COVID-19 news.</p>
+              <p class="entry__tech">Node.js, MongoDB</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--band" id="honors" aria-labelledby="honors-title">
+      <div class="container">
+        <h2 class="section-title" id="honors-title">Honors and service</h2>
+        <ul class="rows rows--tight">
+          <li class="row">
+            <p class="row__meta">2026</p>
+            <p class="row__body"><strong>NSF Student Travel Award</strong>, IEEE/ACM CHASE 2026</p>
+          </li>
+          <li class="row">
+            <p class="row__meta">2026</p>
+            <p class="row__body"><strong>Distinguished Travel Award</strong>, Graduate Student Organization, Stony Brook University</p>
+          </li>
+          <li class="row">
+            <p class="row__meta">2022</p>
+            <p class="row__body"><strong>Second Runner-Up</strong> of 36 teams, Ada Lovelace Datathon (BDOC 2022), taxi demand prediction</p>
+          </li>
+          <li class="row">
+            <p class="row__meta">2021</p>
+            <p class="row__body"><strong>First Runner-Up</strong> of 20 teams, Ada Lovelace Datathon (BDOC 2021), machine learning for COVID-19 impact analysis</p>
+          </li>
+          <li class="row">
+            <p class="row__meta">2021</p>
+            <p class="row__body"><strong>Dean's List Award</strong></p>
+          </li>
+          <li class="row">
+            <p class="row__meta">Since 2024</p>
+            <p class="row__body"><strong>Bangladesh Graduate Students Association</strong>, Stony Brook University: Secretary, then Vice President</p>
+          </li>
+          <li class="row">
+            <p class="row__meta">2021&ndash;2022</p>
+            <p class="row__body"><strong>Chairperson</strong>, IEEE Computer Society Student Branch, BUET</p>
+          </li>
+        </ul>
+
+        <h2 class="section-title section-title--next" id="skills">Skills</h2>
+        <dl class="rows rows--tight skills">
+          <div class="row">
+            <dt class="row__meta">Languages</dt>
+            <dd class="row__body">Python, Java, C/C++, SQL, JavaScript</dd>
+          </div>
+          <div class="row">
+            <dt class="row__meta">Machine learning</dt>
+            <dd class="row__body">PyTorch, TensorFlow, Keras, scikit-learn, Hugging Face Transformers, SHAP, large language models and multi-agent LLM systems, retrieval-augmented generation (RAG)</dd>
+          </div>
+          <div class="row">
+            <dt class="row__meta">Sensing and data</dt>
+            <dd class="row__body">IMU data processing, physiological signal processing (PPG, EDA, EEG), OpenCV, MATLAB, pandas, NumPy</dd>
+          </div>
+          <div class="row">
+            <dt class="row__meta">Tools</dt>
+            <dd class="row__body">Git, Jupyter, Wireshark, Django, Bootstrap, MySQL, MongoDB</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
   </main>
-<!-----google analytics code------>
-  <script src="script.js"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D6CZ4WPCNH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-D6CZ4WPCNH');
-</script>
+  <footer class="footer" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <dl class="rows rows--tight contact">
+        <div class="row">
+          <dt class="row__meta">Email</dt>
+          <dd class="row__body"><a href="mailto:adibashairarifa@gmail.com">adibashairarifa@gmail.com</a></dd>
+        </div>
+        <div class="row">
+          <dt class="row__meta">Profiles</dt>
+          <dd class="row__body contact__links"><a href="https://www.linkedin.com/in/adiba-shaira" rel="me">LinkedIn</a> <a href="https://github.com/AdibaShaira" rel="me">GitHub</a> <a href="CV.pdf">CV (PDF)</a></dd>
+        </div>
+        <div class="row">
+          <dt class="row__meta">Address</dt>
+          <dd class="row__body">Department of Computer Science, Stony Brook University, Stony Brook, NY 11794</dd>
+        </div>
+      </dl>
+      <p class="footer__meta">Last updated October 2026.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

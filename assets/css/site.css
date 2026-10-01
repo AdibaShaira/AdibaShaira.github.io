@@ -38,7 +38,6 @@
   --accent-text: #9f2048;
   --accent-line: rgba(173, 37, 80, 0.42);
   --accent-wash: #fbecf1;
-  --signal-raw: #a3adbb;
   --review-bg: #fdf0d5;
   --review-ink: #6f4508;
   --ongoing-bg: #e6eaf0;
@@ -69,7 +68,6 @@
     --accent-text: #f48aab;
     --accent-line: rgba(239, 111, 150, 0.5);
     --accent-wash: #2c1823;
-    --signal-raw: #4f5d72;
     --review-bg: #3b2c10;
     --review-ink: #f2d08f;
     --ongoing-bg: #222d3d;
@@ -91,7 +89,6 @@
   --accent-text: #f48aab;
   --accent-line: rgba(239, 111, 150, 0.5);
   --accent-wash: #2c1823;
-  --signal-raw: #4f5d72;
   --review-bg: #3b2c10;
   --review-ink: #f2d08f;
   --ongoing-bg: #222d3d;
@@ -240,7 +237,7 @@ q { quotes: "\201C" "\201D"; }
 .menu-toggle { display: none; }
 
 /* ---------- Hero ---------- */
-.hero { padding-top: clamp(40px, 7vw, 92px); }
+.hero { padding-top: clamp(40px, 7vw, 88px); padding-bottom: clamp(48px, 7vw, 88px); }
 
 .hero__grid {
   display: grid;
@@ -252,7 +249,7 @@ q { quotes: "\201C" "\201D"; }
 .hero__name {
   margin: 0 0 22px;
   font-family: var(--display);
-  font-size: clamp(2.75rem, 6.4vw, 4.75rem);
+  font-size: clamp(2.5rem, 5.2vw, 3.875rem);
   font-weight: 500;
   font-optical-sizing: auto;
   line-height: 0.98;
@@ -263,16 +260,6 @@ q { quotes: "\201C" "\201D"; }
   color: var(--ink-2);
   font-size: 1.125rem;
   line-height: 1.55;
-}
-
-.hero__lede {
-  max-width: 22em;
-  margin-top: 30px;
-  font-family: var(--display);
-  font-size: clamp(1.45rem, 2.5vw, 1.875rem);
-  font-weight: 400;
-  line-height: 1.28;
-  letter-spacing: -0.005em;
 }
 
 .hero__links {
@@ -305,40 +292,8 @@ q { quotes: "\201C" "\201D"; }
   background: var(--band);
 }
 
-/* The signal: motion, pulse and sleep settling into one clear line */
-.signal { margin-top: clamp(40px, 6vw, 72px); }
-.signal svg { display: block; width: 100%; height: auto; overflow: visible; }
-.signal__trace {
-  fill: none;
-  stroke: url(#signal-gradient);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.signal__stop-raw { stop-color: var(--signal-raw); }
-.signal__stop-insight { stop-color: var(--accent); }
-.signal__dot { fill: var(--accent); }
-
-.js .signal__trace {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: signal-draw 2.6s cubic-bezier(0.45, 0.05, 0.3, 1) 0.2s forwards;
-}
-.js .signal__dot {
-  transform: scale(0);
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: signal-dot 0.5s ease-out 2.7s forwards;
-}
-@keyframes signal-draw { to { stroke-dashoffset: 0; } }
-@keyframes signal-dot {
-  60% { transform: scale(1.4); }
-  to { transform: scale(1); }
-}
-
 /* ---------- Sections ---------- */
 .section { padding: clamp(56px, 8vw, 104px) 0; }
-.hero + .section { margin-top: clamp(36px, 5vw, 56px); }
 .section--band { background: var(--band); }
 
 .section-title {
@@ -509,9 +464,6 @@ q { quotes: "\201C" "\201D"; }
 @media (max-width: 720px) {
   .hero__grid { grid-template-columns: minmax(0, 1fr); }
   .hero__photo { order: -1; width: 168px; margin-bottom: 28px; }
-  .hero__lede { margin-top: 24px; }
-  .signal__trace { stroke-width: 4; }
-  .signal__dot { r: 9; }
 
   .row { grid-template-columns: minmax(0, 1fr); row-gap: 4px; }
   .row__meta { padding-top: 0; }
@@ -527,13 +479,11 @@ q { quotes: "\201C" "\201D"; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .js .signal__trace { animation: none; stroke-dashoffset: 0; }
-  .js .signal__dot { animation: none; transform: none; }
   a, .topbar { transition: none; }
 }
 
 @media print {
-  .topbar, .signal, .skip-link { display: none; }
+  .topbar, .skip-link { display: none; }
   .section--band { background: none; }
   a { text-decoration: none; }
 }
